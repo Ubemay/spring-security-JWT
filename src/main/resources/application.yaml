@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: spring-security
+  datasource:
+    url: jdbc:postgresql://localhost:5432/springsecurity
+    username: postgres
+    password: Aa1234
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+#      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format-sql: true
+      show-sql: true
+      database: postgresql
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+jwt:
+  secret: 984hg493gh0439rthr0429uruj2309yh937gc763fe87t3f89723gf
+  lifetime: 30m
+
+server:
+  port: 4950
+  servlet:
+    context-path: /demo
+
+logging:
+  level:
+    org.springframework.security: trace
